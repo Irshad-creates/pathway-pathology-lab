@@ -1,0 +1,10 @@
+<svg width="150" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 40">
+  <defs>
+    <style>
+      .sig-path { fill: none; stroke: #1976d2; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+  <!-- Handwritten style signature -->
+  <path class="sig-path" d="M 10 25 Q 15 10 25 15 Q 35 20 40 25 Q 45 30 50 20 Q 55 10 60 18 Q 65 25 70 20 Q 75 15 80 22 Q 85 28 90 20 Q 95 12 100 20 Q 105 28 110 18 Q 115 10 120 20 Q 125 28 130 22"/>
+  <text x="10" y="38" font-family="cursive" font-size="12" fill="#1976d2" font-weight="bold">Dr. Lab</text>
+</svg>

@@ -1,0 +1,11 @@
+# Required npm packages for UPI Payment Integration
+
+# Install these packages in the server directory:
+npm install razorpay
+npm install axios
+npm install paytmchecksum
+
+# Optional packages for enhanced functionality:
+npm install qrcode
+npm install nodemailer
+npm install twilio

@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #1e3a5f 0%, #2c5aa0 100%);
+}
+
+.navbar-tab {
+  @apply px-4 py-3 text-white cursor-pointer hover:opacity-80 transition;
+}
+
+.navbar-tab.active {
+  @apply border-b-4 border-yellow-400;
+}
+
+.status-registration {
+  @apply bg-red-100 text-red-800;
+}
+
+.status-pending {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.status-printed {
+  @apply bg-green-100 text-green-800;
+}
+
+.dual-list-container {
+  @apply flex gap-4;
+}
+
+.dual-list-panel {
+  @apply flex-1 border border-gray-300 rounded;
+}
+
+.dual-list-header {
+  @apply bg-gray-100 p-2 font-semibold border-b;
+}
+
+.dual-list-items {
+  @apply h-64 overflow-y-auto;
+}
+
+.dual-list-item {
+  @apply p-2 border-b cursor-pointer hover:bg-blue-50;
+}
+
+.dual-list-item.selected {
+  @apply bg-blue-200;
+}
+
+.dual-list-buttons {
+  @apply flex flex-col gap-2 justify-center;
+}
+
+.dual-list-btn {
+  @apply px-3 py-2 bg-blue-500 text-white rounded text-sm hover:bg-blue-600;
+}
+
+.billing-section {
+  @apply border-t-2 pt-4 mt-4;
+}
+
+.form-group {
+  @apply mb-4;
+}
+
+.form-label {
+  @apply block text-sm font-semibold mb-1;
+}
+
+.form-input {
+  @apply w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.form-select {
+  @apply w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.btn-primary {
+  @apply px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition;
+}
+
+.btn-secondary {
+  @apply px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500 transition;
+}
+
+.btn-danger {
+  @apply px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 transition;
+}
+
+.table-container {
+  @apply overflow-x-auto;
+}
+
+.table {
+  @apply w-full border-collapse;
+}
+
+.table th {
+  @apply bg-blue-600 text-white p-2 text-left;
+}
+
+.table td {
+  @apply border border-gray-300 p-2;
+}
+
+.table tr:hover {
+  @apply bg-gray-50;
+}
+
+.highlight-row {
+  @apply bg-yellow-200 !important;
+  animation: highlight-pulse 1s ease-in-out;
+}
+
+@keyframes highlight-pulse {
+  0% {
+    background-color: #fef08a;
+  }
+  50% {
+    background-color: #fde047;
+  }
+  100% {
+    background-color: #fef08a;
+  }
+}
