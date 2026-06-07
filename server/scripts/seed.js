@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
+const bcrypt = require("bcryptjs");
 
 const User = require("../models/User");
 const Test = require("../models/Test");
@@ -42,6 +43,11 @@ async function seed() {
         labCode: "LAB001",
       },
     ];
+
+    // Hash passwords since insertMany bypasses save middleware hooks
+    for (const user of users) {
+      user.password = await bcrypt.hash(user.password, 10);
+    }
 
     const createdUsers = await User.insertMany(users);
     console.log(`Created ${createdUsers.length} users`);
