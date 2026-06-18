@@ -1,4 +1,4 @@
- # Pathology Lab CRM
+ # Pathology Lab CRM - by irshad
 
 A real-time pathology laboratory management system. Built this for a client who needed to digitize their lab operations - handles everything from patient registration to billing and reports.
 
