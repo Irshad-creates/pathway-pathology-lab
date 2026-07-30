@@ -1,29 +1,11 @@
 // API Configuration
-// Reads from environment variables or uses defaults
+// Vite replaces import.meta.env.VITE_* at build time with actual values
 
-// Get API URL from environment or use default
-const getApiUrl = () => {
-  // Check if running in browser with window object
-  if (typeof window !== "undefined" && window.__API_CONFIG__) {
-    return window.__API_CONFIG__.backendUrl;
-  }
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const SOCKET_URL_RAW = import.meta.env.VITE_SOCKET_URL || "http://localhost:5000";
 
-  // Default to localhost
-  return "http://localhost:5000";
-};
-
-// Get Socket URL from environment or use default
-const getSocketUrl = () => {
-  // Check if running in browser with window object
-  if (typeof window !== "undefined" && window.__API_CONFIG__) {
-    return window.__API_CONFIG__.socketUrl;
-  }
-
-  // Default to localhost
-  return "http://localhost:5000";
-};
-
-const API_BASE = `${getApiUrl()}/api`;
-const SOCKET_URL = getSocketUrl();
+const API_BASE = `${API_URL}/api`;
+const SOCKET_URL = SOCKET_URL_RAW;
 
 export { API_BASE, SOCKET_URL };
+

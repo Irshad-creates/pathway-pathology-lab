@@ -6,16 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pathology Lab</title>
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-  <script>
-    // Inject API configuration for production
-    // This is set by the server in production
-    if (!window.__API_CONFIG__) {
-      window.__API_CONFIG__ = {
-        backendUrl: import.meta.env.VITE_API_URL,
-        socketUrl: import.meta.env.VITE_SOCKET_URL,
-      };
-    }
-  </script>
 </head>
 
 <body>
