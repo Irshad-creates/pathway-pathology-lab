@@ -51,7 +51,7 @@ coverage/
 .nyc_output/
 
 # Package manager
-package-lock.json
+# NOTE: package-lock.json is NOT ignored — it's required for deployment (npm ci)
 yarn.lock
 pnpm-lock.yaml
 
